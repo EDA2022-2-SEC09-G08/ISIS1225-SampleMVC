@@ -79,4 +79,7 @@ def loadBooksTags(control, filename):
     Carga los tags de los libros del archivo y los agrega a la lista
     de tags. Siga el mismo procedimiento que en la carga de libros.
     """
-    pass
+    catalog=control["model"]
+    booksTagsfile=os.path.join(cf.data_dir,filename)
+    catalog=model.addBookTags(catalog,booksTagsfile)
+    return model.bookTagSize(catalog)

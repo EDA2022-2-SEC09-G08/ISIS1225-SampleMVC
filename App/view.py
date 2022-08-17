@@ -51,6 +51,7 @@ def printMenu():
     print("1- Cargar Libros")
     print("2- Cargar Tags")
     # TODO: Modificaciones lab 1, agregar opcion 3.
+    print("3- Cargar Libros con tags")
     print("0- Salir")
 
 
@@ -101,9 +102,10 @@ while True:
         print("Total de tags cargados: " + str(tags))
 
     # TODO: Modificaciones lab 1, agregar la opcion 3, ladBookTags().
-    elif int(inputs[0]) == 3:
-        pass
-
+    elif int(inputs[0])==3:
+        print("Cargando información de libros con tags...")
+        booksTags=loadBooksTags(control)
+        print("Total de libros con tags cargados: "+str(booksTags))
     else:
         sys.exit(0)
 sys.exit(0)
